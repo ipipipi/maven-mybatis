@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pipidan.dao.OrderMapper">
+    <resultMap id="orders" type="order">
+        <result property="orderId" column="id"/>
+        <result property="orderTime" column="order_time"/>
+        <result property="total" column="total"/>
+    </resultMap>
+
+    <select id="findAll" resultMap="orders">
+        select * from orders
+    </select>
+
+    <insert id="addOrders" parameterType="list">
+        insert into Orders values
+        <foreach collection="list" item="order" separator=",">
+            (#{order.orderId},#{order.orderTime},#{order.total})
+        </foreach>
+    </insert>
+</mapper>

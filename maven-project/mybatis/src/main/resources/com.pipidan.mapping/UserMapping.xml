@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pipidan.dao.UserMapper">
+    <!--sql语句的抽取-->
+    <sql id="selectUsers">select * from users</sql>
+
+    <!--id为resultMap的名称  type为对应Java类  property为Java类的属性   column表的字段名-->
+    <resultMap id="user" type="userMybatis">
+        <result property="id" column="id" />
+        <result property="userId" column="user_id" />
+        <result property="userName" column="user_name" />
+        <result property="password" column="password" />
+    </resultMap>
+
+    <resultMap id="userAndOrder" type="userMybatis">
+        <result property="userId" column="user_id"/>
+        <result property="userName" column="user_name"/>
+        <result property="birthday" column="birthday"/>
+
+        <collection property="orderList" ofType="order">
+            <result property="orderId" column="id"/>
+            <result property="orderTime" column="order_time"/>
+            <result property="total" column="total"/>
+        </collection>
+    </resultMap>
+
+    <select id="findUserAndOrder" resultMap="userAndOrder">
+        select * from users,orders where users.user_id = orders.id
+    </select>
+
+    <select id="findByCondition" resultMap="user" parameterType="userMybatis">
+        <include refid="selectUsers"/>
+        <where>
+            <if test="userId!=0">
+                and user_id = #{userId}
+            </if>
+            <if test="userName!=null">
+                and user_name = #{userName}
+            </if>
+            <if test="password!=null">
+                and password = #{password}
+            </if>
+        </where>
+    </select>
+
+    <select id="findByUserIds" resultMap="user" parameterType="list">
+        <include refid="selectUsers"/>
+        <where>
+            <foreach collection="list" open="user_id in(" close=")" item="userId" separator=",">
+                #{userId}
+            </foreach>
+        </where>
+    </select>
+
+    <insert id="addUser" parameterType="userMybatis">
+        insert into users values (#{id},#{userId},#{userName},#{password})
+    </insert>
+
+    <update id="updateUser" parameterType="userMybatis">
+        update users set user_name=#{userName},password=#{password} where user_id=#{userId}
+    </update>
+
+    <update id="updateUserBirthday" parameterType="userMybatis">
+        update users set birthday=#{birthday} where user_id=#{userId}
+    </update>
+
+    <delete id="deleteUser" parameterType="int">
+        delete from users where user_id=#{userId}
+    </delete>
+
+</mapper>

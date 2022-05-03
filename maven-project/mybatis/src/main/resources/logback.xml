@@ -1,0 +1,43 @@
+<configuration xmlns="http://ch.qos.logback/xml/ns/logback"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://ch.qos.logback/xml/ns/logback
+               https://raw.githubusercontent.com/enricopulatzo/logback-XSD/master/src/main/xsd/logback.xsd">
+    <!--输出到控制台-->
+    <appender name="STDOUTConsole" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>记录时间： %date  %line %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="infoFile" class="ch.qos.logback.core.FileAppender" level="DEBUG">
+        <file>C:\jiaqi\idea_code\maven-project\mybatis\src\log.log</file>
+        <encoder>
+            <pattern>记录时间： %date  %line %msg%n</pattern>
+        </encoder>
+        <additivity>true</additivity>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <appender name="errorFile" class="ch.qos.logback.core.FileAppender" level="DEBUG">
+        <file>C:\jiaqi\idea_code\maven-project\mybatis\src\errorLog.log</file>
+        <encoder>
+            <pattern>记录时间： %date  %line %msg%n</pattern>
+        </encoder>
+        <additivity>true</additivity>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <logger name="com.pipidan.test.GenerateLog">
+        <appender-ref ref="STDOUTConsole"/>
+        <appender-ref ref="errorFile"/>
+        <appender-ref ref="infoFile"/>
+    </logger>
+</configuration>

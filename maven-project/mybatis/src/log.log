@@ -1,0 +1,40 @@
+记录时间： 2022-04-27 20:49:30,849  40 [UserMybatis{userId=0, userName='null', password='pipidan'}, UserMybatis{userId=0, userName='null', password='pipidan'}, UserMybatis{userId=0, userName='null', password='pipidan'}]
+记录时间： 2022-04-27 20:50:53,952  40 [UserMybatis{1userId=0, userName='null', password='pipidan'}, UserMybatis{2userId=0, userName='null', password='pipidan'}, UserMybatis{6userId=0, userName='null', password='pipidan'}]
+记录时间： 2022-04-27 20:51:58,154  40 [UserMybatis{userId=1, userId=0, userName='null', password='pipidan'}, UserMybatis{userId=2, userId=0, userName='null', password='pipidan'}, UserMybatis{userId=6, userId=0, userName='null', password='pipidan'}]
+记录时间： 2022-04-27 20:53:56,470  39 [UserMybatis{id=1, userId=0, userName='null', password='pipidan'}, UserMybatis{id=2, userId=0, userName='null', password='pipidan'}, UserMybatis{id=6, userId=0, userName='null', password='pipidan'}]
+记录时间： 2022-04-27 20:59:19,151  35 [UserMybatis{id=1, userId=0, userName='null', password='pipidan'}, UserMybatis{id=2, userId=0, userName='null', password='pipidan'}, UserMybatis{id=6, userId=0, userName='null', password='pipidan'}]
+记录时间： 2022-04-27 21:12:10,844  37 [UserMybatis{id=1, userId=0, userName='null', password='pipidan'}, UserMybatis{id=19, userId=0, userName='null', password='pipidan'}, UserMybatis{id=20, userId=0, userName='null', password='pipidan'}, UserMybatis{id=21, userId=0, userName='null', password='pipidan'}]
+记录时间： 2022-04-27 21:44:23,550  37 [UserMybatis{id=1, userId=1, userName='皮', password='pipidan'}, UserMybatis{id=19, userId=2, userName='kaka', password='pipidan'}, UserMybatis{id=20, userId=3, userName='kaka', password='pipidan'}, UserMybatis{id=21, userId=4, userName='本二', password='pipidan'}]
+记录时间： 2022-04-27 22:26:22,712  37 [UserMybatis{id=1, userId=1, userName='皮', password='pipidan'}, UserMybatis{id=19, userId=2, userName='kaka', password='pipidan'}, UserMybatis{id=20, userId=3, userName='kaka', password='pipidan'}, UserMybatis{id=21, userId=4, userName='本二', password='pipidan'}]
+
+记录时间： 2022-04-28 15:12:44,999  43 [UserMybatis{id=1, userId=1, userName='lucky', password='huahuahu'}, UserMybatis{id=19, userId=2, userName='kaka', password='pipidan'}, UserMybatis{id=22, userId=3, userName='lucky', password='yoyo'}, UserMybatis{id=21, userId=4, userName='本二', password='pipidan'}]
+记录时间： 2022-04-28 20:52:44,173  50 [UserMybatis{id=1, userId=1, userName='lucky', password='huahuahu'}, UserMybatis{id=19, userId=2, userName='kaka', password='pipidan'}]
+记录时间： 2022-04-30 15:57:24,445  34 Unparseable date: "1999-02-25"
+记录时间： 2022-04-30 15:57:24,736  56 
+### Error building SqlSession.
+### The error may exist in com.pipidan.mapping\UserMapping.xml
+### The error occurred while processing mapper_resultMap[user]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'user'.  Cause: java.lang.ClassNotFoundException: Cannot find class: user
+记录时间： 2022-04-30 15:59:01,338  56 
+### Error building SqlSession.
+### The error may exist in com.pipidan.mapping\UserMapping.xml
+### The error occurred while processing mapper_resultMap[user]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'user'.  Cause: java.lang.ClassNotFoundException: Cannot find class: user
+记录时间： 2022-04-30 15:59:48,324  57 
+### Error building SqlSession.
+### The error may exist in com.pipidan.mapping\UserMapping.xml
+### The error occurred while processing mapper_resultMap[user]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'user'.  Cause: java.lang.ClassNotFoundException: Cannot find class: user
+记录时间： 2022-04-30 16:01:07,705  58 
+### Error building SqlSession.
+### The error may exist in com.pipidan.mapping\UserMapping.xml
+### The error occurred while processing mapper_resultMap[user]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'user'.  Cause: java.lang.ClassNotFoundException: Cannot find class: user
+记录时间： 2022-04-30 16:05:09,626  54 [UserMybatis{userId=4, userName='本二', password='pipidan', birthday=Thu Feb 25 00:00:00 CST 1999}]
+记录时间： 2022-04-30 16:08:27,988  54 [UserMybatis{userId=4, userName='本二', password='pipidan', birthday=1999-02-25}]
+记录时间： 2022-05-01 12:57:19,298  48 [Order{orderId=1, orderTime=2022-05-01, total=1024.0, user=null}, Order{orderId=1, orderTime=2022-05-01, total=235.02, user=null}, Order{orderId=1, orderTime=2022-05-01, total=864.61, user=null}, Order{orderId=2, orderTime=2022-05-01, total=902.29, user=null}, Order{orderId=2, orderTime=2022-05-01, total=263.02, user=null}]
+记录时间： 2022-05-01 12:57:58,091  48 [Order{orderId=1, orderTime=2022-05-01 12:41:58, total=1024.0, user=null}, Order{orderId=1, orderTime=2022-05-01 12:50:45, total=235.02, user=null}, Order{orderId=1, orderTime=2022-05-01 12:50:45, total=864.61, user=null}, Order{orderId=2, orderTime=2022-05-01 12:50:45, total=902.29, user=null}, Order{orderId=2, orderTime=2022-05-01 12:50:45, total=263.02, user=null}]
+记录时间： 2022-05-01 14:43:11,836  48 [Order{orderId=1, orderTime=2022-05-01 12:41:58, total=1024.0}, Order{orderId=1, orderTime=2022-05-01 12:50:45, total=235.02}, Order{orderId=1, orderTime=2022-05-01 12:50:45, total=864.61}, Order{orderId=2, orderTime=2022-05-01 12:50:45, total=902.29}, Order{orderId=2, orderTime=2022-05-01 12:50:45, total=263.02}]
+记录时间： 2022-05-01 14:43:19,290  54 [UserMybatis{userId=1, userName='lucky', password='null', orderList=[Order{orderId=1, orderTime=2022-05-01 12:41:58, total=1024.0}, Order{orderId=1, orderTime=2022-05-01 12:50:45, total=235.02}, Order{orderId=1, orderTime=2022-05-01 12:50:45, total=864.61}], birthday=Thu Jan 01 08:00:00 CST 1970}, UserMybatis{userId=2, userName='kaka', password='null', orderList=[Order{orderId=19, orderTime=2022-05-01 12:50:45, total=902.29}, Order{orderId=19, orderTime=2022-05-01 12:50:45, total=263.02}], birthday=Thu Jan 01 08:00:00 CST 1970}]
+记录时间： 2022-05-01 14:45:24,049  54 [UserMybatis{userId=1, userName='lucky', password='null', orderList=[Order{orderId=1, orderTime=2022-05-01 12:41:58, total=1024.0}, Order{orderId=1, orderTime=2022-05-01 12:50:45, total=235.02}, Order{orderId=1, orderTime=2022-05-01 12:50:45, total=864.61}], birthday=1970-01-01}, UserMybatis{userId=2, userName='kaka', password='null', orderList=[Order{orderId=19, orderTime=2022-05-01 12:50:45, total=902.29}, Order{orderId=19, orderTime=2022-05-01 12:50:45, total=263.02}], birthday=1970-01-01}]
+记录时间： 2022-05-01 14:49:36,685  54 [UserMybatis{userId=1, userName='lucky', password='null', birthday=1970-01-01, orderList=[Order{orderId=1, orderTime=2022-05-01 12:41:58, total=1024.0}, Order{orderId=1, orderTime=2022-05-01 12:50:45, total=235.02}, Order{orderId=1, orderTime=2022-05-01 12:50:45, total=864.61}]}, UserMybatis{userId=2, userName='kaka', password='null', birthday=1970-01-01, orderList=[Order{orderId=19, orderTime=2022-05-01 12:50:45, total=902.29}, Order{orderId=19, orderTime=2022-05-01 12:50:45, total=263.02}]}]
